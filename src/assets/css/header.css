@@ -1,0 +1,22 @@
+:root {
+    --morado-oscuro: #171520;
+    --morado: #262335;
+    --shadow: 0 5px 10px #55a6ff38;
+
+    --font-family-body: "Montserrat", sans-serif;
+}
+.header {
+    background-color: var(--morado-oscuro);
+    /* border-radius: 0 0 10px 10px; */
+    box-shadow: var(--shadow);
+    height: 4.75rem;
+    display: flex;
+    justify-content: center;
+}
+.header_elements {
+    width: 90%;
+    display:flex ;
+    justify-content: space-between;
+    align-items: center;
+  }
+ 

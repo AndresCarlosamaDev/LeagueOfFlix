@@ -1,0 +1,44 @@
+:root {
+    --morado-oscuro: #171520;
+    --morado: #262335;
+    --shadow: 0 5px 10px #55a6ff38;
+
+    --font-family-body: "Montserrat", sans-serif;
+}
+
+.videos {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--morado);
+    padding-bottom: 4rem;
+    align-items: center;
+}
+.videos_conteinAll {
+    width: 90%;
+    display: flex;
+    margin-top: 3rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+.videos_logo img{
+    height: 9vh;
+    margin-bottom: 2rem;
+}
+
+/* Videos */
+.videos_container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.videos_content {
+    margin-right: 2rem;
+}
+
+.videos_content_unit {
+    width: 25vw;
+    height: 25vh;
+    box-shadow: 9px 9px 56px -14px rgba(0,0,0,0.75);
+}

@@ -1,0 +1,33 @@
+:root {
+    --morado-oscuro: #171520;
+    --morado: #262335;
+    --shadow: 0 5px 10px #55a6ff38;
+
+    --font-family-body: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.footer {
+    width: 100%;
+    background-color: var(--morado-oscuro);
+    height: auto;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.footer_content {
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+}
+
+.footer_content .footer_h4 h4 {
+    margin: 0;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 400;
+}

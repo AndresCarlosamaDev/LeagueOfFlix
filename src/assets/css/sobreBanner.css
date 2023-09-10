@@ -1,0 +1,68 @@
+:root {
+    --morado-oscuro: #171520;
+    --morado: #262335;
+    --shadow: 0 5px 10px #55a6ff38;
+
+    --font-family-body: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.SobreBanner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 60vh;
+}
+
+.SobreBanner_cont_All {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.SobreBanner_contain {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.container-btn button img{
+    transform: scale(1.9);
+    margin-bottom: 2rem;
+    transition: all .3s ease-in-out;
+}
+
+.container-btn button {
+    background-color: transparent;
+    border: none;
+}
+
+.container-btn button img:hover {  
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+.container-description h3 {
+    font-family: var(--font-family-body);
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+
+.container-description p {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.container-btn img{
+    height: 9vh;
+    margin-bottom: 2rem;
+}
+
+.SobreBanner_video iframe {
+    box-shadow: 9px 9px 56px -14px rgba(0,0,0,0.75);
+}

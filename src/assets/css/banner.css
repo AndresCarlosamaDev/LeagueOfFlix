@@ -1,0 +1,9 @@
+.banner {
+    display: flex;
+    justify-content: center;
+    background-color: aqua;
+}
+.banner img {
+    width: 100%;
+    height: calc(100vh - 76px);
+}

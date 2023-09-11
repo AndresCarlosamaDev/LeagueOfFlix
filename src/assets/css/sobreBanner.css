@@ -50,12 +50,13 @@
     font-family: var(--font-family-body);
     color: white;
     font-size: 3rem;
-    margin-bottom: 0;
+    margin: 2rem 0;
 }
 
 .container-description p {
     font-size: 1.2rem;
     color: white;
+    line-height: 1.5rem;
 }
 
 .container-btn img{

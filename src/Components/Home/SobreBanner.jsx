@@ -1,6 +1,6 @@
 import React from "react";
-import logoLCK from "../assets/img/LCK_logo_White.png";
-import "../assets/css/sobreBanner.css";
+import logoLCK from "../../assets/img/LCK_logo_White.png";
+import "../../assets/css/sobreBanner.css";
 
 export const SobreBanner = () => {
   return (

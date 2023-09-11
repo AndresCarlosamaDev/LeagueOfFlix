@@ -1,8 +1,8 @@
 import React from "react";
-import "../assets/css/video.css";
-import logoLCK from "../assets/img/LCK_logo_White.png";
-import logoLEC from '../assets/img/LEC_logo_White.png'
-import logoLLA from '../assets/img/LLA_logo_White.png'
+import "../../assets/css/video.css";
+import logoLCK from "../../assets/img/LCK_logo_White.png";
+import logoLEC from '../../assets/img/LEC_logo_White.png'
+import logoLLA from '../../assets/img/LLA_logo_White.png'
 
 export const Videos = () => {
   return (

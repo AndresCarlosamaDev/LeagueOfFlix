@@ -1,0 +1,10 @@
+.page_contain {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.page_contain img {
+    width: 100%;
+    height: calc(100vh - 76px);
+}

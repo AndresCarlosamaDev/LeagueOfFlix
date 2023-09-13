@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/img/Logo.png";
 import "../../assets/css/header.css";
 import { Button } from "./Button";
+import { CounterContext } from "../../Context";
 
 export const Header = () => {
   const ruta = window.location.href;
@@ -16,10 +17,11 @@ export const Header = () => {
     } else {
       return(false)}
   }
-  
   console.log(displayBtn()) //true
 
-    
+  //Texto btn
+  const contextData = useContext(CounterContext)
+
   return (
     <header className="header">
       <div className="header_elements">
@@ -29,7 +31,7 @@ export const Header = () => {
           </Link>
         </div>
         {
-          displayBtn() && <Link to="/nuevo-video"><Button className="header_btn" variant="contained">Nuevo Video</Button></Link>
+          displayBtn() && <Link to="/nuevo-video"><Button contextData={contextData.btnHeader}/></Link>
         }
           
       </div>

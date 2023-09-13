@@ -8,8 +8,8 @@ export const Home = () => {
   return (
     <>
       <Banner />
-      <Videos />
       <SobreBanner />
+      <Videos />
     </>
   );
 };

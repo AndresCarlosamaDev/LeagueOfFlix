@@ -1,28 +1,32 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Input } from "./Input";
 import { Categoria } from "./Categoria";
-import { Descripcion } from "./Descripcion";
 import { Button } from "../Home/Button";
 import "../../assets/css/formularioNV.css";
+import { CounterContext } from "../../Context";
+import { Link } from "react-router-dom";
 
 export const Formulario = () => {
+
+  const contextData = useContext(CounterContext)
+
   return (
     <section className="formulario">
       <div className="formulario_contain">
         <form className="formulario_contain_form" action="">
           <h2>Agregar un nuevo video</h2>
-          <Input />
-          <Input />
+          <Input contextData={contextData.titulo}/>
+          <Input contextData={contextData.url}/>
           <Categoria />
-          <Descripcion />
-          <Input />
+          <Input contextData={contextData.desc}/>
+          <Input contextData={contextData.cod}/>
           <div className="formulario_contain_btns">
             <div className="formulario_contain_btns-save">
-              <Button />
-              <Button />
+              <Button contextData={contextData.btnGuardar}/>
+              <Button contextData={contextData.btnLimpiar}/>
             </div>
             <div className="formulario_contain_btns-add">
-              <Button />
+              <Link to="/nueva-categoria"><Button contextData={contextData.btnNuevaCat}/></Link>
             </div>
           </div>
         </form>

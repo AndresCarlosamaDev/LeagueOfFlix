@@ -2,8 +2,8 @@ import React from "react";
 import '../../assets/css/button.css'
 
 
-export const Button = () => {
+export const Button = ({contextData}) => {
     return (
-        <button className="btn">Nuevo video</button>
+        <button className="btn">{contextData}</button>
     )
 }

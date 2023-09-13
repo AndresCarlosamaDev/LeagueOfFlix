@@ -1,0 +1,12 @@
+.imagen_contein {
+    width: 80%;
+    height: 3rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.imagen_contain-label {
+    margin-bottom: .5rem;
+}

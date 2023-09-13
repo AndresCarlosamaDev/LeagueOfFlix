@@ -1,0 +1,47 @@
+{
+    "ligas": [
+        {
+            "id": "LCK",
+            "nombre": "LCK",
+            "descripcion": "Liga de LOL oficial de Korea",
+            "codigo": "liga123"
+        },
+        {
+            "id": "LEC",
+            "nombre": "LEC",
+            "descripcion": "Liga de LOL oficial de Europa",
+            "codigo": "liga123"
+        },{
+            "id": "LLA",
+            "nombre": "LLA",
+            "descripcion": "Liga de LOL oficial de Latinoamerica",
+            "codigo": "liga123"
+        }
+    ],
+    "videos": [
+        {
+            "id": 1,
+            "titulo": "El Heraldo",
+            "url": "https://www.youtube.com/embed/5kS-BicsjS4?si=eUjH7ZjPIfLLL46s",
+            "liga": "LLA",
+            "descripcion": "Añalisis de partida R7 vs Isurus",
+            "codigo": "video123"
+        },
+        {
+            "id": 2,
+            "titulo": "La gran final",
+            "url": "https://www.youtube.com/embed/eBvuEn21KTE?si=mnoXEEwW7G78vCj7",
+            "liga": "LEC",
+            "descripcion": "Final de Europa",
+            "codigo": "video123"
+        },
+        {
+            "id": 3,
+            "titulo": "El resurgir de T1",
+            "url": "https://www.youtube.com/embed/ReDxxWdOpCA?si=cFYPWoCdXi_xmMGH",
+            "liga": "LCK",
+            "descripcion": "T1 invicto",
+            "codigo": "video123"
+        }
+    ]
+}

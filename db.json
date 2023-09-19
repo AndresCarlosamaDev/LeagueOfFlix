@@ -35,6 +35,12 @@
       "nombre": "LCL",
       "descripcion": "Liga de LOL Comunidad de estados independientes",
       "codigo": "12345"
+    },
+    {
+      "id": "1d44ad54-9af9-461e-b5b2-91e5e7988ec1",
+      "nombre": "CBLOL",
+      "descripcion": "Liga de LOL oficial de Brasil",
+      "codigo": "12345"
     }
   ],
   "videos": [
@@ -130,7 +136,7 @@
       "id": "80e8b3d6-25df-4ace-9744-fee580211601",
       "titulo": "Opening Title | 2022 LCK Summer Split",
       "url": "https://www.youtube.com/embed/Hs3LFwb8b7w?si=qkk7e2GkvB7rtPHb",
-      "liga": false,
+      "liga": "LCK",
       "descripcion": "Opening Title | 2022 LCK Summer Split",
       "codigo": "12345"
     },
@@ -188,6 +194,30 @@
       "url": "https://www.youtube.com/embed/EERHxX_9Ogc?si=iNUAhKuY_LjvJpkJ",
       "liga": "LPL",
       "descripcion": "JDG VS. LNG - LPL Summer Finals 2023",
+      "codigo": "12345"
+    },
+    {
+      "id": "1095e63e-4363-4495-9034-605c5121f1a8",
+      "titulo": "Cerimônia de Abertura, com Mastercard",
+      "url": "https://www.youtube.com/embed/iWIY9ruo8Xo?si=HeLW3s4ene-pWtEm",
+      "liga": "CBLOL",
+      "descripcion": "Cerimônia de Abertura, com Mastercard",
+      "codigo": "12345"
+    },
+    {
+      "id": "55e085fb-6aa7-4849-a2bd-9cdbdf76726a",
+      "titulo": "Halftime Show Heineken",
+      "url": "https://www.youtube.com/embed/3vcm19DIO_c?si=yhF8NMwA2Yl6foBh",
+      "liga": "CBLOL",
+      "descripcion": "Final CBLOL 2023",
+      "codigo": "12345"
+    },
+    {
+      "id": "6e368543-83df-4162-977b-2d49117bb08d",
+      "titulo": "De volta para o Recife: especial Final do #CBLOL",
+      "url": "https://www.youtube.com/embed/Qrtxsp43Fi8?si=4kzo54uKhz1aQib5",
+      "liga": "CBLOL",
+      "descripcion": "De volta para o Recife: especial Final do #CBLOL",
       "codigo": "12345"
     }
   ]

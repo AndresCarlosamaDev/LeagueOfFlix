@@ -23,9 +23,15 @@
     align-items: center;
 }
 
-.videos_logo img{
+/* .videos_logo img{
     height: 9vh;
     margin-bottom: 2rem;
+} */
+.videos_logo h1{
+    font-size: 2.5rem;
+    padding: 1rem 0;
+    color: var(--rosado);
+    font-weight: 400;
 }
 
 /* Videos */
@@ -36,11 +42,11 @@
     justify-content: flex-start;
 }
 .btn-left {
-    top: 9rem;
+    top: 10rem;
     left: -2rem;
 }
 .btn-right {
-    top: 9rem;
+    top: 10rem;
     right: -2rem;
 }
 
@@ -63,7 +69,7 @@
 
 .videos_content-text h3 {
     color: white;
-    font-weight: 500;
+    font-weight: 200;
     font-size: 1.2rem;
     transition: .3s all ease-in-out;
 }

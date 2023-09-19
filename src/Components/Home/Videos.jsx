@@ -44,7 +44,8 @@ export const Videos = () => {
       {ligas.map((liga) => (
         <div className="videos_conteinAll">
           <div className="videos_logo">
-            <img src={liga.nombre} alt={liga.nombre} />
+            {/* <img src={liga.nombre} alt={liga.nombre} /> */}
+            <h1>{liga.nombre}</h1>
           </div>
           <div className="videos_botones azul">
             <img

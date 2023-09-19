@@ -18,6 +18,7 @@ export const FormularioNC = () => {
     const url = "ligas"
     const datos = {id:uuid(), nombre:liga.value, descripcion:desc.value, codigo:cod.value}
     crearLiga(url, datos)
+    console.log(datos)
   }
 
   const limpiarDatos = () => {
@@ -30,7 +31,7 @@ export const FormularioNC = () => {
   //Hooks
   const [liga, setLiga] = useState({ value: "", valid: null });
   const [desc, setDesc] = useState({ value: "", valid: null });
-  const [img, setImg] = useState({ value: "", valid: true });
+  const [img, setImg] = useState({ value: null, valid: true });
   const [cod, setCod] = useState({ value: "", valid: null });
 
 
@@ -66,10 +67,8 @@ export const FormularioNC = () => {
           />
           <Imagen
             contextData={contextData.img}
-            value={img.value}
-            onChange={(e) => {
-              console.log((e))
-            }}
+            value
+            confImg={setImg}
           />
           <TextField
             sx={{ width: '80%', mb: '1.5rem' }}

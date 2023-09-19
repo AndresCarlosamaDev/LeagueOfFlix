@@ -36,11 +36,11 @@
     justify-content: flex-start;
 }
 .btn-left {
-    top: 13.5rem;
+    top: 9rem;
     left: -2rem;
 }
 .btn-right {
-    top: 13.5rem;
+    top: 9rem;
     right: -2rem;
 }
 
@@ -55,6 +55,22 @@
 
 .videos_content {
     margin-right: 2rem;
+}
+
+.videos_content-text {
+    margin-top: .5rem;
+}
+
+.videos_content-text h3 {
+    color: white;
+    font-weight: 500;
+    font-size: 1.2rem;
+    transition: .3s all ease-in-out;
+}
+
+.videos_content-text h3:hover {
+    color: var(--rosado);
+    font-size: 1.3rem;
 }
 
 .btn-right,

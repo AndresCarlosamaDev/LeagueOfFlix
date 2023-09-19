@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState, useEffect } from 'react';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -6,21 +6,35 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import { buscar } from '../../api/api';
+import { IconButton } from '@mui/material';
+import EditIcon from '@mui/icons-material/Edit';
+import DeleteIcon from '@mui/icons-material/Delete';
+import { borrarLiga } from '../../api/api';
 
-// Iconos
-// import EditIcon from '@mui/icons-material/Edit';
 
-function createData(nombre, descripcion, editar, remover) {
-  return { nombre, descripcion, editar, remover };
-}
+export const Tabla = ({ url }) => {
 
-const rows = [
-  createData('LCK', 'Liga oficial de Korea' ,'Editar', 'Remover'),
-  createData('LEC', 'Liga oficial de Europa' ,'Editar', 'Remover'),
-  createData('LLA', 'Liga oficial de Latam' ,'Editar', 'Remover'),
-];
+    //Datos db
+    const [ligas, setLigas] = useState([])
 
-export const Tabla = () => {
+    useEffect(() => {
+      buscar(url, setLigas)
+      // console.log(ligas)
+    }, [url])
+
+    //Hooks edit - delete
+    
+    const editar = () => {
+      console.log("Btn editar")
+    }
+
+    const eliminar = (id) => {
+      console.log("Btn eliminar", id)
+      const url = "ligas"
+      borrarLiga(url, id)
+    }
+
   return (
     <TableContainer component={Paper} sx={{ px: "7rem", py: "2rem", borderRadius: '10px' }}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -33,21 +47,22 @@ export const Tabla = () => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
+
+          {ligas.map((liga) => (
             <TableRow
-              key={row.nombre}
+              key={liga.nombre}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
-              <TableCell component="th" scope="row">
-                {row.nombre}
+              <TableCell component="th" scope="liga">
+                {liga.nombre}
               </TableCell>
-              <TableCell align="right">{row.descripcion}</TableCell>
-
-              <TableCell align="right">{row.editar}</TableCell>
-              <TableCell align="right">{row.remover}</TableCell>
+              <TableCell align="right">{liga.descripcion}</TableCell>
+              <TableCell align="right"><IconButton onClick={() => editar()} variant="contained"><EditIcon /></IconButton></TableCell>
+              <TableCell align="right"><IconButton onClick={() => eliminar(liga.id)} variant="contained"><DeleteIcon /></IconButton></TableCell>
             </TableRow>
           ))}
         </TableBody>
+
       </Table>
     </TableContainer>
   );

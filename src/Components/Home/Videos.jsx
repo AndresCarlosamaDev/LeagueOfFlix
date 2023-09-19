@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../../assets/css/video.css";
 import logoLCK from "../../assets/img/LCK_logo_White.png";
 import left from "../../assets/img/left.png";
 import right from "../../assets/img/right.png";
+import { buscar, buscarVideos } from "../../api/api";
 
 export const Videos = () => {
   const moveLeft = () => {
@@ -17,92 +18,67 @@ export const Videos = () => {
     return (videos_container.scrollLeft += 1500);
   };
 
+  //Use Effect
+  const [videos, setVideos] = useState([]);
+  const url = "/videos";
+
+  useEffect(() => {
+    buscarVideos(url, setVideos);
+  }, [url]);
+
+  console.log(videos, "videos");
+
+  // -----
+  //Datos db
+  const [ligas, setLigas] = useState([]);
+  const urlL = "/ligas";
+  useEffect(() => {
+    buscar(urlL, setLigas);
+    // console.log(ligas)
+  }, [url]);
+
+  console.log(ligas, "ligas");
+
   return (
     <section className="videos">
-      {/* Liga LCK */}
-      <div className="videos_conteinAll">
-        <div className="videos_logo">
-          <img src={logoLCK} alt="Logo_LCK" />
-        </div>
-        <div className="videos_botones azul">
-          <img
-            className="btn-left"
-            onClick={moveLeft}
-            src={left}
-            alt="boton_izquierda"
-          />
-          <img
-            className="btn-right"
-            onClick={moveRight}
-            src={right}
-            alt="boton_derecha"
-          />
-        </div>
-        <div className="videos_container">
-          <div className="videos_content">
-            <iframe
-              className="videos_content_unit"
-              src="https://www.youtube.com/embed/5kS-BicsjS4?si=eUjH7ZjPIfLLL46s"
-              title="YouTube video player"
-              allowfullscreen
-            ></iframe>
+      {ligas.map((liga) => (
+        <div className="videos_conteinAll">
+          <div className="videos_logo">
+            <img src={liga.nombre} alt={liga.nombre} />
           </div>
-
-          <div className="videos_content">
-            <iframe
-              className="videos_content_unit"
-              src="https://www.youtube.com/embed/eBvuEn21KTE?si=mnoXEEwW7G78vCj7"
-              title="YouTube video player"
-              allowfullscreen
-            ></iframe>
+          <div className="videos_botones azul">
+            <img
+              className="btn-left"
+              onClick={moveLeft}
+              src={left}
+              alt="boton_izquierda"
+            />
+            <img
+              className="btn-right"
+              onClick={moveRight}
+              src={right}
+              alt="boton_derecha"
+            />
           </div>
-
-          <div className="videos_content">
-            <iframe
-              className="videos_content_unit"
-              src="https://www.youtube.com/embed/ReDxxWdOpCA?si=cFYPWoCdXi_xmMGH"
-              title="YouTube video player"
-              allowfullscreen
-            ></iframe>
-          </div>
-
-          <div className="videos_content">
-            <iframe
-              className="videos_content_unit"
-              src="https://www.youtube.com/embed/5kS-BicsjS4?si=eUjH7ZjPIfLLL46s"
-              title="YouTube video player"
-              allowfullscreen
-            ></iframe>
-          </div>
-
-          <div className="videos_content">
-            <iframe
-              className="videos_content_unit"
-              src="https://www.youtube.com/embed/5kS-BicsjS4?si=eUjH7ZjPIfLLL46s"
-              title="YouTube video player"
-              allowfullscreen
-            ></iframe>
-          </div>
-
-          <div className="videos_content">
-            <iframe
-              className="videos_content_unit"
-              src="https://www.youtube.com/embed/5kS-BicsjS4?si=eUjH7ZjPIfLLL46s"
-              title="YouTube video player"
-              allowfullscreen
-            ></iframe>
-          </div>
-
-          <div className="videos_content">
-            <iframe
-              className="videos_content_unit"
-              src="https://www.youtube.com/embed/5kS-BicsjS4?si=eUjH7ZjPIfLLL46s"
-              title="YouTube video player"
-              allowfullscreen
-            ></iframe>
+          <div className="videos_container">
+            {videos
+              .filter((video) => video.liga === liga.nombre)
+              .map((video) => (
+                <div className="videos_content" key={video.id}>
+                  <iframe
+                    className="videos_content_unit"
+                    src={video.url}
+                    title="YouTube video player"
+                    allowFullScreen // Cambié allowfullscreen a allowFullScreen
+                  ></iframe>
+                  <div className="videos_content-text">
+                    <h3>{video.titulo}</h3>
+                  </div>
+                </div>
+              ))}
           </div>
         </div>
-      </div>
+      ))}
     </section>
   );
 };

@@ -9,15 +9,13 @@ export const Header = () => {
   const ruta = window.location.href;
   const rutaActual = "http://localhost:3000/"
 
-  console.log(ruta)
-
   const displayBtn = () => {
     if (ruta === rutaActual){
       return(true)
     } else {
       return(false)}
   }
-  console.log(displayBtn()) //true
+  // console.log(displayBtn())
 
   //Texto btn
   const contextData = useContext(CounterContext)
@@ -26,12 +24,12 @@ export const Header = () => {
     <header className="header">
       <div className="header_elements">
         <div className="header_img">
-          <Link to="/">
+          <a href="/">
             <img src={logo} alt="Logo" />
-          </Link>
+          </a>
         </div>
         {
-          displayBtn() && <Link to="/nuevo-video"><Button contextData={contextData.btnHeader}/></Link>
+          displayBtn() && <a href="/nuevo-video"><Button contextData={contextData.btnHeader}/></a>
         }
           
       </div>

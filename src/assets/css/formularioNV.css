@@ -17,11 +17,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 5rem 0;
 }
 
 .formulario_contain {
     width: 50%;
-    height: 70%;
     padding: 3rem 0 5rem;
     background-color: #ffffff;
     border-radius: 10px;

@@ -24,7 +24,7 @@ export const actualizarLiga = async (ligaObj) => {
 }
 
 export const borrarLiga = async (url,idLiga) => {
-    const eliminarLiga = `${urlServer}${url}/${idLiga}`
+    const eliminarLiga = `${urlServer}${url}${idLiga}`
     await axios.delete(eliminarLiga)
 }
 

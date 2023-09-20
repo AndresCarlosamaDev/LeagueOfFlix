@@ -1,10 +1,10 @@
 import axios from "axios"
 
 const api = axios.create({
-    baseURL: "j-server-league-of-flix.vercel.app"
+    baseURL: "https://j-server-league-of-flix.vercel.app/"
 })
 const urlBase = "http://localhost:5000"
-const urlServer = "j-server-league-of-flix.vercel.app"
+const urlServer = "https://j-server-league-of-flix.vercel.app/"
 
 
 // Formulario Categoria

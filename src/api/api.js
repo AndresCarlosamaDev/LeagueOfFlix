@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const api = axios.create({
-    baseURL: "http://localhost:5000"
+    baseURL: "j-server-league-of-flix.vercel.app"
 })
 const urlBase = "http://localhost:5000"
 const urlServer = "j-server-league-of-flix.vercel.app"

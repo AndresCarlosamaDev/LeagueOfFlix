@@ -15,7 +15,7 @@ export const buscar = async (url, setData) => {
 }
 
 export const crearLiga = (url, ligaObj) => {
-    const nuevaLiga = `${urlServer}/${url}`
+    const nuevaLiga = `${urlServer}${url}`
     return axios.post(nuevaLiga, ligaObj)
 }
 

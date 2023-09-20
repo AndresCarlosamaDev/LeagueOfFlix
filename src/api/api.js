@@ -4,7 +4,7 @@ const api = axios.create({
     baseURL: "http://localhost:5000"
 })
 const urlBase = "http://localhost:5000"
-const urlServer = "j-server-liga-de-flix-3wq31r7k5-andrescarlosamadev.vercel.app"
+const urlServer = "j-server-league-of-flix.vercel.app"
 
 
 // Formulario Categoria

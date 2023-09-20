@@ -29,7 +29,7 @@ export const Header = () => {
           </a>
         </div>
         {
-          displayBtn() && <Link href="https://league-of-flix.vercel.app/videos"><Button contextData={contextData.btnHeader}/></Link>
+          displayBtn() && <Link href="videos"><Button contextData={contextData.btnHeader}/></Link>
         }
           
       </div>

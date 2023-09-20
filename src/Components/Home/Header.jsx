@@ -7,7 +7,7 @@ import { CounterContext } from "../../Context";
 
 export const Header = () => {
   const ruta = window.location.href;
-  const rutaActual = "https://j-server-league-of-flix.vercel.app/"
+  const rutaActual = "https://league-of-flix.vercel.app/"
 
   const displayBtn = () => {
     if (ruta === rutaActual){

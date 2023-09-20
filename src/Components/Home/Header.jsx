@@ -29,7 +29,7 @@ export const Header = () => {
           </a>
         </div>
         {
-          displayBtn() && <Link href="videos"><Button contextData={contextData.btnHeader}/></Link>
+          displayBtn() && <a href="videos"><Button contextData={contextData.btnHeader}/></a>
         }
           
       </div>

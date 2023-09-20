@@ -16,8 +16,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="/nuevo-video" element={<NuevoVideo />}></Route>
-        <Route path="/nueva-categoria" element={<NuevaCategoria />}></Route>
+        <Route path="/videos" element={<NuevoVideo />}></Route>
+        <Route path="/ligas" element={<NuevaCategoria />}></Route>
         <Route path="*" element={<Page404 />}></Route>
       </Routes>
       <Footer />

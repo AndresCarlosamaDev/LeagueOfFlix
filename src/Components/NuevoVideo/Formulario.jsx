@@ -127,7 +127,7 @@ export const Formulario = () => {
               <Button contextData={contextData.btnLimpiar} idBtn={contextData.idBtnLimpiar} funcion={limpiarDatos}/>
             </div>
             <div className="formulario_contain_btns-add">
-              <Link to="/nueva-categoria"><Button contextData={contextData.btnNuevaCat}/></Link>
+              <Link to="/ligas"><Button contextData={contextData.btnNuevaCat}/></Link>
             </div>
           </div>
         </form>

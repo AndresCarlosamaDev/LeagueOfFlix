@@ -36,6 +36,6 @@ export const buscarVideos = async (url, setData) => {
 }
 
 export const crearVideo = (url, ligaObj) => {
-    const nuevaLiga = `${urlServer}${url}`
+    const nuevaLiga = `${urlServer}/${url}`
     return axios.post(nuevaLiga, ligaObj)
 }

@@ -92,7 +92,7 @@ export const FormularioNC = () => {
         </form>
       </div>
       <div className="formulario_contain-table">
-        <Tabla url={"/ligas"} />
+        <Tabla url={"ligas"} />
       </div>
     </section>
   );

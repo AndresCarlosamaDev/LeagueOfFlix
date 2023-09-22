@@ -7,7 +7,7 @@ import "../../assets/css/FomrularioNC.css";
 import { Tabla } from "./Tabla";
 import { CounterContext } from "../../Context";
 import { validaLiga, validaDescripcion, validaCodigo } from "../../validaciones";
-import { crearLiga } from "../../api/api";
+import { crearLiga, actualizarLiga } from "../../api/api";
 import { v4 as uuid } from "uuid";
 
 export const FormularioNC = () => {
@@ -27,6 +27,31 @@ export const FormularioNC = () => {
     setImg({ value: "", valid: null });
     setCod({ value: "", valid: null });
   }
+
+  //Hook id
+  const [id, setId] = useState()
+  
+  //Actualizar datos
+  const actualizarDatos = (datos) => {
+    console.log(datos)
+    
+    setId(datos.id)
+    
+    setLiga({ value: datos.nombre, valid: null });
+    setDesc({ value: datos.descripcion, valid: null });
+    setImg({ value: "", valid: null });
+    setCod({ value: datos.codigo, valid: null });
+  }
+  
+  const envioActualizacionDatos = () => {
+
+    const url = "ligas"
+    const datos = {id:id, nombre:liga.value, descripcion:desc.value, codigo:cod.value}
+    actualizarLiga(url, datos)
+    // console.log(id)
+    // console.log(datos)
+  }
+
 
   //Hooks
   const [liga, setLiga] = useState({ value: "", valid: null });
@@ -49,6 +74,7 @@ export const FormularioNC = () => {
               const value = input.target.value;
               const valid = validaLiga(value);
               setLiga({ value, valid });
+              console.log(value);
             }}
             error={liga.valid === false}
             helperText={liga.valid === false && "Verifica tus datos de ingreso"}
@@ -87,12 +113,13 @@ export const FormularioNC = () => {
             <div className="formulario_contain_btns-save">
               <Button contextData={contextData.btnGuardar} idBtn={contextData.idBtnGuardar} funcion={guardarDatos}/>
               <Button contextData={contextData.btnLimpiar} idBtn={contextData.idBtnLimpiar} funcion={limpiarDatos}/>
+              <Button contextData={contextData.btnActualizar} idBtn={contextData.idBtnActualizar} funcion={envioActualizacionDatos}/>
             </div>
           </div>
         </form>
       </div>
       <div className="formulario_contain-table">
-        <Tabla url={"ligas"} />
+        <Tabla url={"ligas"} actualizarDatos={actualizarDatos} />
       </div>
     </section>
   );

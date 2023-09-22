@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
 import logo from "../../assets/img/Logo.png";
 import "../../assets/css/header.css";
 import { Button } from "./Button";
@@ -7,8 +6,8 @@ import { CounterContext } from "../../Context";
 
 export const Header = () => {
   const ruta = window.location.href;
-  const rutaActual = "https://league-of-flix.vercel.app/"
-  // const rutaActual = "http://localhost:3000/"
+  // const rutaActual = "https://league-of-flix.vercel.app/"
+  const rutaActual = "http://localhost:3000/"
 
   const displayBtn = () => {
     if (ruta === rutaActual){
@@ -16,7 +15,6 @@ export const Header = () => {
     } else {
       return(false)}
   }
-  // console.log(displayBtn())
 
   //Texto btn
   const contextData = useContext(CounterContext)

@@ -13,7 +13,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import { borrarLiga } from '../../api/api';
 
 
-export const Tabla = ({ url }) => {
+export const Tabla = ({ url, actualizarDatos }) => {
 
     //Datos db
     const [ligas, setLigas] = useState([])
@@ -25,8 +25,8 @@ export const Tabla = ({ url }) => {
 
     //Hooks edit - delete
     
-    const editar = () => {
-      console.log("Btn editar")
+    const editar = (liga) => {
+      actualizarDatos(liga)
     }
 
     const eliminar = (id) => {
@@ -57,7 +57,7 @@ export const Tabla = ({ url }) => {
                 {liga.nombre}
               </TableCell>
               <TableCell align="right">{liga.descripcion}</TableCell>
-              <TableCell align="right"><IconButton onClick={() => editar()} variant="contained"><EditIcon /></IconButton></TableCell>
+              <TableCell align="right"><IconButton onClick={() => editar(liga)} variant="contained"><EditIcon /></IconButton></TableCell>
               <TableCell align="right"><IconButton onClick={() => eliminar(liga.id)} variant="contained"><DeleteIcon /></IconButton></TableCell>
             </TableRow>
           ))}

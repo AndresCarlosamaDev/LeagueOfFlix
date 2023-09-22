@@ -8,10 +8,18 @@ export const Button = ({contextData,idBtn,funcion}) => {
             return(
             <button id='guardar' type="submit" className="btn" onClick={funcion}>{contextData}</button>
             )
-        }else{
+        }if(idBtn === 'limpiar'){
             return(
             <button id='limpiar' type="submit" className="btn" onClick={funcion}>{contextData}</button>
             )
+        }if (idBtn === 'actualizar'){
+            return(
+                <button id='actualizar' type="submit" className="btn" onClick={funcion}>{contextData}</button>
+                )
+        }else{
+            return(
+                <button type="submit" className="btn">{contextData}</button>
+                )
         }
 
 }

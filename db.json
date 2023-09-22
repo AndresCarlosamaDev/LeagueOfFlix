@@ -1,12 +1,6 @@
 {
   "ligas": [
     {
-      "id": "0082d844-b17b-4f36-8957-1017054ba822",
-      "nombre": "LEC",
-      "descripcion": "Liga de LOL oficial de Europa",
-      "codigo": "12345"
-    },
-    {
       "id": "fe0bc748-9f18-451a-82cd-bafa85720ca1",
       "nombre": "LLA",
       "descripcion": "Liga de LOL oficial de Latinoamerica",
@@ -34,6 +28,12 @@
       "id": "bb57e517-a907-40f2-a743-828245daa8c0",
       "nombre": "LCK",
       "descripcion": "Liga de LOL oficial de Korea",
+      "codigo": "12345"
+    },
+    {
+      "id": "152f41ee-db5e-44d4-9e35-7993fdff6406",
+      "nombre": "LEC",
+      "descripcion": "Liga de LOL oficial de Europa",
       "codigo": "12345"
     }
   ],

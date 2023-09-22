@@ -19,11 +19,14 @@ export const CounterProvider = ({ children }) => {
 
     btnGuardar: 'Guardar',
     btnLimpiar: 'Limpiar',
+    btnActualizar: 'Actualizar',
     btnNuevaCat: 'Nueva Categoría',
     btnHeader: 'Nuevo Video',
 
     idBtnGuardar: 'guardar',
     idBtnLimpiar: 'limpiar',
+    idBtnActualizar: 'actualizar',
+
 
     // Formulario Video
     tituloVideo: 'Ingresa un titulo al video',

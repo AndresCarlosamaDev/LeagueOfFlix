@@ -78,7 +78,7 @@
 /*Mobile*/
 @media screen and (max-width: 425px) {
     .formulario_contain {
-        width: 86%;
+        width: 80%;
     }
     .formulario_contain_form h2 {
         font-size: 2rem;

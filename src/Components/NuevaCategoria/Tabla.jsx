@@ -11,6 +11,7 @@ import { IconButton } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { borrarLiga } from '../../api/api';
+import '../../assets/css/tabla.css';
 
 
 export const Tabla = ({ url, actualizarDatos }) => {
@@ -36,7 +37,7 @@ export const Tabla = ({ url, actualizarDatos }) => {
     }
 
   return (
-    <TableContainer component={Paper} sx={{ px: "7rem", py: "2rem", borderRadius: '10px' }}>
+    <TableContainer className="tableContain" component={Paper} sx={{ px: "4rem", py: "2rem", borderRadius: '10px' }}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>

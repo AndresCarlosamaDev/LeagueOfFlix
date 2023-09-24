@@ -9,13 +9,13 @@ export const Videos = () => {
   const moveLeft = () => {
     console.log("Boton left funcionando");
     const videos_container = document.querySelector(".videos_container");
-    return (videos_container.scrollLeft -= 1500);
+    return (videos_container.scrollLeft -= 700);
   };
 
   const moveRight = () => {
     console.log("Boton right funcionando");
     const videos_container = document.querySelector(".videos_container");
-    return (videos_container.scrollLeft += 1500);
+    return (videos_container.scrollLeft += 700);
   };
 
   //Use Effect

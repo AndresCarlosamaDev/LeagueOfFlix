@@ -18,7 +18,7 @@ export const FormularioNC = () => {
     const url = "ligas"
     const datos = {id:uuid(), nombre:liga.value, descripcion:desc.value, codigo:cod.value}
     crearLiga(url, datos)
-    console.log(datos)
+    // console.log(datos)
   }
 
   const limpiarDatos = () => {
@@ -33,7 +33,7 @@ export const FormularioNC = () => {
   
   //Actualizar datos
   const actualizarDatos = (datos) => {
-    console.log(datos)
+    // console.log(datos)
     
     setId(datos.id)
     
@@ -74,7 +74,7 @@ export const FormularioNC = () => {
               const value = input.target.value;
               const valid = validaLiga(value);
               setLiga({ value, valid });
-              console.log(value);
+              // console.log(value);
             }}
             error={liga.valid === false}
             helperText={liga.valid === false && "Verifica tus datos de ingreso"}
